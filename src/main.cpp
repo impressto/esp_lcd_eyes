@@ -1,4 +1,6 @@
+#include <Arduino.h>
 #include <LovyanGFX.hpp>
+#include "ladybug.h"  // Your image header
 
 // Create a display instance
 class LGFX : public lgfx::LGFX_Device {
@@ -51,20 +53,45 @@ public:
 LGFX tft;
 
 void setup() {
+
+  Serial.begin(115200);
+  Serial.println("LGFX start");
+
     tft.init();
+    tft.invertDisplay(true);
     tft.setRotation(0);
     tft.fillScreen(TFT_BLACK);
 
     tft.setTextColor(TFT_WHITE, TFT_BLACK);
     tft.drawCentreString("Hello GC9A01!", 120, 120, 4);
 
-    tft.fillCircle(120, 120, 100, TFT_BLUE);
-    tft.drawCircle(120, 120, 110, TFT_RED);
+    delay(4000);
+
+    Serial.println("Drawing the image...");
+
+    // this is the magic command we were looking for
+      tft.setSwapBytes (true);   
+      tft.setRotation(3);     
+    // Draw the image
+    tft.startWrite();
+    tft.pushImage(0, 0, 240, 240, ladybug);
+    tft.endWrite();
+
+
+    delay(8000);
+
+    Serial.println("Drawing circles...");
+
+
+   // tft.fillCircle(120, 120, 100, TFT_BLUE);
+    //tft.drawCircle(120, 120, 110, TFT_RED);
+
+
 }
 
 void loop() {
-    static int r = 0;
-    tft.fillCircle(120, 120, 50, tft.color565(r % 255, 100, 200));
-    delay(100);
-    r += 10;
+   // static int r = 0;
+   // tft.fillCircle(120, 120, 50, tft.color565(r % 255, 100, 200));
+  //  delay(100);
+   // r += 10;
 }
