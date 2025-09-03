@@ -1,17 +1,11 @@
 
-// use imagemagic to convert from regular image to RGB565.bmp
-convert image.png -define bmp:subtype=RGB565 image.bmp
-
-python3 bmp_to_rgb565_header.py image.bmp image.h myImage
-
-// these cheap displays render opposite colors
+// these cheap displays render opposite colors, so this command fixes it
 tft.invertDisplay(true);
 
 // fix issue with colors being whack
 tft.setSwapBytes (true);   
 
-
-// 2 displays
+If using 2 displays, these are fairly standard pins and allow for an efficient layout of wires:
 
 Display 1:
 
@@ -28,5 +22,3 @@ SCLK -> GPIO18 (same as Display 1)
 DC -> GPIO27 white
 RST -> GPIO26 brown
 CS -> GPIO15 green
-
-
