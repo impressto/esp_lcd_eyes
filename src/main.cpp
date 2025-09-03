@@ -166,15 +166,11 @@ void setup()
   // call this BEFORE pushImage
   sprite1.setSwapBytes(true);
   sprite1.pushImage(0, 0, 240, 240, blue_spiral);
-  // drawSprite(sprite1);
 
-  // delay(1000);
-
-  // the sprite needs to be the max display witdh/height minus 1 pixel
-  // othewise nothing will be drawn
+  // commented out for now because the cheap ESP32 C3 I am testing with does not have
+  // enough PSRAM to hold 2x 240x240 sprites
   // sprite2.setPsram(true);
   // sprite2.createSprite(239, 239);
-  // call this BEFORE pushImage
   // sprite2.setSwapBytes(true);
   // sprite2.pushImage(0, 0, 240, 240, hypnotic_spiral);
 }
@@ -204,12 +200,12 @@ void loop()
     rotationCounter = 0;
   }
 
-  // delay(10);
   rotateSprite1();
 
   delay(10);
 }
 
+// example - not in use in this script
 void drawImage()
 {
 
@@ -224,6 +220,7 @@ void drawImage()
   Serial.println("Images drawn");
 }
 
+// example - not in use in this script
 void drawSprite(LGFX_Sprite &sprite)
 {
 
