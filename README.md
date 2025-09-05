@@ -1,0 +1,137 @@
+# New Pjgjghage
+
+## `esp_lcd_eyes`
+
+**A brief one-liner description:**  
+*Example*: `ESP32-based interactive display that follows eye direction on an LCD using proximity sensors.`
+
+---
+
+### Table of Contents
+
+- [About<svg class="block h-[0.75em] w-[0.75em] stroke-current stroke-[0.75]" data-rtl-flip="" fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"></svg>](#about)
+- [Features<svg class="block h-[0.75em] w-[0.75em] stroke-current stroke-[0.75]" data-rtl-flip="" fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"></svg>](#features)
+- [Requirements<svg class="block h-[0.75em] w-[0.75em] stroke-current stroke-[0.75]" data-rtl-flip="" fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"></svg>](#requirements)
+- [Hardware Setup<svg class="block h-[0.75em] w-[0.75em] stroke-current stroke-[0.75]" data-rtl-flip="" fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"></svg>](#hardware-setup)
+- [Software Setup<svg class="block h-[0.75em] w-[0.75em] stroke-current stroke-[0.75]" data-rtl-flip="" fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"></svg>](#software-setup)
+- [Usage<svg class="block h-[0.75em] w-[0.75em] stroke-current stroke-[0.75]" data-rtl-flip="" fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"></svg>](#usage)
+- [Configuration<svg class="block h-[0.75em] w-[0.75em] stroke-current stroke-[0.75]" data-rtl-flip="" fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"></svg>](#configuration) *(if applicable)*
+- [Examples<svg class="block h-[0.75em] w-[0.75em] stroke-current stroke-[0.75]" data-rtl-flip="" fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"></svg>](#examples)
+- [License<svg class="block h-[0.75em] w-[0.75em] stroke-current stroke-[0.75]" data-rtl-flip="" fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"></svg>](#license)
+- [Contributing<svg class="block h-[0.75em] w-[0.75em] stroke-current stroke-[0.75]" data-rtl-flip="" fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"></svg>](#contributing)
+- [Acknowledgments<svg class="block h-[0.75em] w-[0.75em] stroke-current stroke-[0.75]" data-rtl-flip="" fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"></svg>](#acknowledgments)
+
+---
+
+### About
+
+Provide project context:
+
+- What does the project do?
+- Why was it created?
+- Who might find it useful?
+
+*For example*:  
+`esp_lcd_eyes is a lightweight ESP32 project that animates "eyes" on an LCD based on sensor input, giving your device a playful, interactive personality.`
+
+---
+
+### Features
+
+List major highlights. For instance:
+
+- Simple eye-tracking animation based on sensor inputs
+- Supports \[display type, e.g. ILI9341 via SPI\]
+- Modular sensor input (proximity, IR, etc.)
+- Easy calibration and configuration
+- Low resource usage
+
+---
+
+### Requirements
+
+#### Hardware
+
+- ESP32 development board (e.g. ESP32-DevKitC)
+- LCD display module (model/type)
+- Sensor module(s): e.g., IR or ultrasonic proximity sensor
+- Required GPIO wiring (list of pins used or wiring diagram)
+
+#### Software
+
+- ESP-IDF version (e.g. v5.x) or Arduino framework
+- Required components/libs (e.g. `esp_lcd`, `lvgl`, display driver component)
+
+---
+
+### Hardware Setup
+
+Explain how to wire components:
+
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary" id="bkmrk-esp32-pin-%7C-componen"><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">  
+</div></div></div><div class="overflow-y-auto p-4" dir="ltr">`ESP32 Pin | Component | Description<span class="hljs-comment">----------|-----------|-------------</span>GPIO23    | LCD SCK   | SPI <span class="hljs-built_in">clock</span>GPIO19    | LCD MOSI  | SPI dataGPIO18    | LCD CS    | Chip <span class="hljs-built_in">select</span>GPIO5     | LCD DC    | Data/CommandGPIO17    | Sensor Vcc| +<span class="hljs-number">5</span>VGPIO16    | Sensor Out| Signal to ESP32...`</div></div>*Optionally*: include a schematic or diagram.
+
+---
+
+### Software Setup
+
+#### Using ESP-IDF
+
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary" id="bkmrk-git-clone-https%3A%2F%2Fgi"><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">  
+</div></div></div><div class="overflow-y-auto p-4" dir="ltr">`git <span class="hljs-built_in">clone</span> https://github.com/impressto/esp_lcd_eyes.git<span class="hljs-built_in">cd</span> esp_lcd_eyesidf.py set-target esp32idf.py menuconfig   <span class="hljs-comment"># configure your pins/display/sensors</span>idf.py build flash monitor`</div></div>#### Using Arduino (if applicable)
+
+Provide instructions for Arduino, if supported.
+
+---
+
+### Usage
+
+Explain:
+
+- What the default demo does when powered up.
+- How to trigger or interact with the "eyes" (e.g., wave your hand).
+- How to read logs, or calibrate sensor thresholds.
+
+---
+
+### Configuration
+
+If your project includes tunable parameters (e.g., sensitivity thresholds, animation speed, display resolution):
+
+- Point out where they are defined (`menuconfig` or `config.h`).
+- Explain how to modify them.
+
+---
+
+### Examples
+
+Provide simple use-case scenarios:
+
+- **Default mode**: follow proximity sensor input.
+- **Idle mode**: blink randomly when no input.
+- **Custom behavior**: how to override animation.
+
+---
+
+### License
+
+Specify open-source license (e.g. MIT, Apache-2.0). If unspecified, you might choose one.
+
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary" id="bkmrk-mit-license-or-apach"><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">  
+</div></div></div><div class="overflow-y-auto p-4" dir="ltr">`MIT License or Apache-2.0 (as appropriate)`</div></div>---
+
+### Contributing
+
+Encourage others to contribute:
+
+- How to file issues or pull requests
+- Coding standards
+- Testing steps
+- Branch naming conventions, etc.
+
+---
+
+### Acknowledgments
+
+- Any inspirations, code snippets you adapted, libraries used (e.g., `esp_lcd`, `lvgl`).
+- Tooling that helped build the project.
