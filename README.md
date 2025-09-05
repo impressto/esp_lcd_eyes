@@ -1,11 +1,6 @@
 
 ## ESP32 LCD Eyes
 
-**A brief one-liner description:**  
-*Example*: `ESP32-based interactive display that follows eye direction on an LCD using proximity sensors.`
-
----
-
 ### Table of Contents
 
 - [About<svg class="block h-[0.75em] w-[0.75em] stroke-current stroke-[0.75]" data-rtl-flip="" fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"></svg>](#about)
