@@ -1,6 +1,5 @@
-# New Pjgjghage
 
-## `esp_lcd_eyes`
+## ESP32 LCD Eyes
 
 **A brief one-liner description:**  
 *Example*: `ESP32-based interactive display that follows eye direction on an LCD using proximity sensors.`
