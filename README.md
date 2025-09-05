@@ -58,39 +58,9 @@ List major highlights. For instance:
 
 ---
 
-### Hardware Setup
-
-Explain how to wire components:
-
-<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary" id="bkmrk-esp32-pin-%7C-componen"><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">  
-</div></div></div><div class="overflow-y-auto p-4" dir="ltr">`ESP32 Pin | Component | Description<span class="hljs-comment">----------|-----------|-------------</span>
-  GPIO23    | LCD SCK   | SPI <span class="hljs-built_in">clock</span>
-  GPIO19    | LCD MOSI  | SPI data
-  GPIO18    | LCD CS    | Chip <span class="hljs-built_in">select</span>
-  GPIO5     | LCD DC    | Data/CommandGPIO17    | Sensor Vcc| +<span class="hljs-number">5</span>
-  GPIO16    | Sensor Out| Signal to ESP32...`</div></div>*Optionally*: include a schematic or diagram.
-
----
-
 ### License
 
 Specify open-source license (e.g. MIT, Apache-2.0). If unspecified, you might choose one.
 
 <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary" id="bkmrk-mit-license-or-apach"><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">  
 </div></div></div><div class="overflow-y-auto p-4" dir="ltr">`MIT License or Apache-2.0 (as appropriate)`</div></div>---
-
-### Contributing
-
-Encourage others to contribute:
-
-- How to file issues or pull requests
-- Coding standards
-- Testing steps
-- Branch naming conventions, etc.
-
----
-
-### Acknowledgments
-
-- Any inspirations, code snippets you adapted, libraries used (e.g., `esp_lcd`, `lvgl`).
-- Tooling that helped build the project.
