@@ -63,47 +63,12 @@ List major highlights. For instance:
 Explain how to wire components:
 
 <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary" id="bkmrk-esp32-pin-%7C-componen"><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">  
-</div></div></div><div class="overflow-y-auto p-4" dir="ltr">`ESP32 Pin | Component | Description<span class="hljs-comment">----------|-----------|-------------</span>GPIO23    | LCD SCK   | SPI <span class="hljs-built_in">clock</span>GPIO19    | LCD MOSI  | SPI dataGPIO18    | LCD CS    | Chip <span class="hljs-built_in">select</span>GPIO5     | LCD DC    | Data/CommandGPIO17    | Sensor Vcc| +<span class="hljs-number">5</span>VGPIO16    | Sensor Out| Signal to ESP32...`</div></div>*Optionally*: include a schematic or diagram.
-
----
-
-### Software Setup
-
-#### Using ESP-IDF
-
-<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary" id="bkmrk-git-clone-https%3A%2F%2Fgi"><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">  
-</div></div></div><div class="overflow-y-auto p-4" dir="ltr">`git <span class="hljs-built_in">clone</span> https://github.com/impressto/esp_lcd_eyes.git<span class="hljs-built_in">cd</span> esp_lcd_eyesidf.py set-target esp32idf.py menuconfig   <span class="hljs-comment"># configure your pins/display/sensors</span>idf.py build flash monitor`</div></div>#### Using Arduino (if applicable)
-
-Provide instructions for Arduino, if supported.
-
----
-
-### Usage
-
-Explain:
-
-- What the default demo does when powered up.
-- How to trigger or interact with the "eyes" (e.g., wave your hand).
-- How to read logs, or calibrate sensor thresholds.
-
----
-
-### Configuration
-
-If your project includes tunable parameters (e.g., sensitivity thresholds, animation speed, display resolution):
-
-- Point out where they are defined (`menuconfig` or `config.h`).
-- Explain how to modify them.
-
----
-
-### Examples
-
-Provide simple use-case scenarios:
-
-- **Default mode**: follow proximity sensor input.
-- **Idle mode**: blink randomly when no input.
-- **Custom behavior**: how to override animation.
+</div></div></div><div class="overflow-y-auto p-4" dir="ltr">`ESP32 Pin | Component | Description<span class="hljs-comment">----------|-----------|-------------</span>
+  GPIO23    | LCD SCK   | SPI <span class="hljs-built_in">clock</span>
+  GPIO19    | LCD MOSI  | SPI data
+  GPIO18    | LCD CS    | Chip <span class="hljs-built_in">select</span>
+  GPIO5     | LCD DC    | Data/CommandGPIO17    | Sensor Vcc| +<span class="hljs-number">5</span>
+  GPIO16    | Sensor Out| Signal to ESP32...`</div></div>*Optionally*: include a schematic or diagram.
 
 ---
 
